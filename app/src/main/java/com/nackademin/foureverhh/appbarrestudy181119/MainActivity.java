@@ -1,5 +1,6 @@
 package com.nackademin.foureverhh.appbarrestudy181119;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
         switch (item.getItemId()){
             case R.id.action_favorite:
-                Toast.makeText(this, "Favorites", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this,TestUpAction.class);
+                startActivity(intent);
                 break;
             case R.id.action_settings:
                 Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
